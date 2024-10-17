@@ -1,0 +1,18 @@
+.dropZone {
+  border: 2px dashed #ccc;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.dropZoneActive {
+  border-color: #3b82f6;
+}
+
+.previewImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
