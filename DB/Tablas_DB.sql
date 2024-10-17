@@ -116,32 +116,3 @@ CREATE TABLE empleados (
     fecha_contratacion TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP, -- Fecha de contratación
     CONSTRAINT fk_id_puesto FOREIGN KEY (id_puesto) REFERENCES puestos(id) ON DELETE SET NULL -- Relación con la tabla puestos
 );
-
-
-/*markdown
-
-### Tabla `Carreras`
-
-*/
-
-CREATE TABLE carreras (
-    id_carrera SERIAL PRIMARY KEY, -- Clave primaria con autoincremento
-    nombre_carrera VARCHAR(100) NOT NULL, -- Nombre de la carrera
-    fecha_creacion TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP -- Fecha de creación
-);
-
-/*markdown
-### Tabla `Alumnos`
-*/
-
-CREATE TABLE alumnos (
-    matricula VARCHAR(20) PRIMARY KEY, -- Clave primaria con formato de matrícula única
-    nombre VARCHAR(50) NOT NULL, -- Nombre del alumno
-    apellido_paterno VARCHAR(50) NOT NULL, -- Apellido paterno
-    apellido_materno VARCHAR(50), -- Apellido materno (puede ser opcional)
-    grado INT NOT NULL, -- Grado académico
-    grupo CHAR(1) NOT NULL, -- Grupo (generalmente es una letra)
-    id_carrera INT NOT NULL, -- Llave foránea a la tabla carreras
-    fecha_registro TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP, -- Fecha de registro del alumno
-    CONSTRAINT fk_id_carrera FOREIGN KEY (id_carrera) REFERENCES carreras (id_carrera) ON DELETE CASCADE -- Relación con la tabla carreras
-);
