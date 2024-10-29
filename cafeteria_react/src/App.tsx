@@ -10,6 +10,7 @@ import Navigation from './pages/Navigation'
 import PuestoPage from './pages/PuestoPage'
 import CreateEmpleado from './pages/CreateEmpleado'
 import TablaEmpleados from './pages/TablaEmpleados'
+import TablaAlumnos from './pages/TablaAlumnos'
 // import PuestoPage from './pages/PuestoPage'
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/empleados" element={<TablaEmpleados />} />
 
           <Route path="/create-puesto" element={<CreatePuesto />} />
+          <Route path="/alumnos" element={<TablaAlumnos />} />
         </Routes>
       </Router>
     </>

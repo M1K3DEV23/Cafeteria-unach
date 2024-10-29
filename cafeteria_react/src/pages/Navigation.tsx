@@ -22,6 +22,7 @@ const Navigation: React.FC = () => {
           <li><Link to="/create-puesto" className="block p-3 bg-white shadow-md rounded-lg text-blue-600 hover:bg-blue-100 transition duration-300">Crear Puestos</Link></li>
           <li><Link to="/empleados" className="block p-3 bg-white shadow-md rounded-lg text-blue-600 hover:bg-blue-100 transition duration-300">Administrar Empleados</Link></li>
           <li><Link to="/create-empleado" className="block p-3 bg-white shadow-md rounded-lg text-blue-600 hover:bg-blue-100 transition duration-300">Crear Empleados</Link></li>
+          <li><Link to="/alumnos" className="block p-3 bg-white shadow-md rounded-lg text-blue-600 hover:bg-blue-100 transition duration-300">Ver Alumnos</Link></li>
         </ul>
       </nav>
     </div>
