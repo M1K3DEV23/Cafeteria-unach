@@ -20,22 +20,19 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 app.use(express.json())
 
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
 // RUTAS
 const categoriasRoutes = require('./src/routes/categorias')
 const productoRoutes = require('./src/routes/productos')
 const puestosRouter = require('./src/routes/puestos')
 const empleadoRouter = require('./src/routes/empleados')
-const carrerasRouter = require('./src/routes/carreras')
+const alumnosRouter = require('./src/routes/alumnos')
 
 app.use('/categorias', categoriasRoutes)
 app.use('/productos', productoRoutes)
 app.use('/puestos', puestosRouter)
 app.use('/empleados', empleadoRouter)
-app.use('/carreras', carrerasRouter)
+app.use('/alumnos', alumnosRouter)
+
 
 // Punto de entrada de mi aplicacion
 app.listen(port, () => {
